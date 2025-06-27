@@ -1,0 +1,24 @@
+# IDE's
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# env folder
+.venv
+
+# cache
+__pycache__
+.pytest_cache
+
+# credentials
+.env
+
+# drivers
+*.exe
+
+# Test output
+assets/
+*.log
+*.xml
+*.html
