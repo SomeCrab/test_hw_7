@@ -17,8 +17,11 @@ BASE_URL = f'{SHEME}{DOMAIN}:{PORT}'
 # wipe path
 WIPE_URL = '/magic/delete_create_all'
 
+# login
+LOGIN_URL = '/auth/login'
+
 # employee path
-EMPLOYEE_URL = f'/employee'
+EMPLOYEE_URL = '/employee'
 EMP_CREATE_URL = f'{EMPLOYEE_URL}/create'
 EMP_INFO_URL = f'{EMPLOYEE_URL}/info/'
 EMP_CHANGE_URL = f'{EMPLOYEE_URL}/change/'

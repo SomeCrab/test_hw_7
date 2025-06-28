@@ -1,5 +1,6 @@
 import requests
 from config import (
+    LOGIN_URL,
     EMP_INFO_URL,
     EMP_CREATE_URL,
     EMP_CHANGE_URL,
@@ -46,7 +47,7 @@ class EmployeeApi():
     def get_token_parameter(self) -> str:
         """Sends POST request to get tocken and returns it as a tocken parameter for requests"""
 
-        response = requests.post(self.url + '/auth/login', json=CREDENTIALS)
+        response = requests.post(f"{self.url}{LOGIN_URL}", json=CREDENTIALS)
 
         self.__assert_response_code(response.status_code, EXPECTED_200)
         return f'?client_token={response.json()["user_token"]}'
