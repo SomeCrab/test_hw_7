@@ -9,4 +9,5 @@ Pygments==2.19.2
 pytest==8.4.1
 python-dotenv==1.1.1
 requests==2.32.4
+uritools==5.0.0
 urllib3==2.5.0

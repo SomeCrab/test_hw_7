@@ -1,5 +1,6 @@
 from dotenv import load_dotenv
 from os import getenv
+from uritools import uricompose
 
 # creds
 load_dotenv()
@@ -9,22 +10,22 @@ CREDENTIALS = {
 }
 
 # base url
-SHEME = 'http://'
+SCHEME = 'http'
 DOMAIN = '5.101.50.27'
 PORT = '8000'
-BASE_URL = f'{SHEME}{DOMAIN}:{PORT}'
+BASE_URL = uricompose(scheme=SCHEME, host=DOMAIN, port=PORT)
 
 # wipe path
-WIPE_URL = '/magic/delete_create_all'
+WIPE_PATH = '/magic/delete_create_all'
 
 # login
-LOGIN_URL = '/auth/login'
+LOGIN_PATH = '/auth/login'
 
 # employee path
-EMPLOYEE_URL = '/employee'
-EMP_CREATE_URL = f'{EMPLOYEE_URL}/create'
-EMP_INFO_URL = f'{EMPLOYEE_URL}/info/'
-EMP_CHANGE_URL = f'{EMPLOYEE_URL}/change/'
+EMPLOYEE_PATH = '/employee'
+EMP_CREATE_PATH = f'{EMPLOYEE_PATH}/create'
+EMP_INFO_PATH = f'{EMPLOYEE_PATH}/info/'
+EMP_CHANGE_PATH = f'{EMPLOYEE_PATH}/change/'
 
 # expected employee data
 FIRST_ID = 1
